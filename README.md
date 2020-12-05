@@ -15,6 +15,6 @@ A live version of `index.html` is hosted at
 [negamartin.github.com/4212](https://negamartin.github.io/4212).
 Just visit the page and get your passwords!
 
-`index.html` is a self-contained 14KB file which you can download and open using any browser (IE11
+`index.html` is a self-contained 15KB file which you can download and open using any browser (IE11
 or newer).
 If you want to apply a healthy dose of paranoia you can also download and host the file yourself.
