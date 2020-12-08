@@ -23,19 +23,22 @@ file = open(inpath, "r")
 by_prefix = {}
 for word in file.readlines():
     word = word.strip()
-    if len(word) >= minlen:
-        by_prefix.setdefault(word[:prefixlen], []).append(word)
+    by_prefix.setdefault(word[:prefixlen], []).append(word)
 file.close()
 
 
 # Resolve prefix conflicts through `prefer`
 wordlist = []
 for prefix, words in by_prefix.items():
-    preferred = words[0]
-    for word in words[1:]:
-        if prefer(preferred, word):
+    preferred = None
+    any_long_enough = False
+    for word in words:
+        if preferred == None or prefer(preferred, word):
             preferred = word
-    wordlist.append(preferred)
+        if len(word) >= minlen:
+            any_long_enough = True
+    if any_long_enough:
+        wordlist.append(preferred)
 
 # Print entire wordlist as a space-separated string
 print(f"{len(wordlist)} words:")
