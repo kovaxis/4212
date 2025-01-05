@@ -12,7 +12,7 @@ The longer phrase only serves as a mnemonic for the shortened version.
 # Usage
 
 A live version of `index.html` is hosted at
-[negamartin.github.com/4212](https://negamartin.github.io/4212).
+[kovaxis.github.com/4212](https://kovaxis.github.io/4212).
 Just visit the page and get your passwords!
 
 `index.html` is a self-contained 16KB file which you can download and open using any browser (IE11
